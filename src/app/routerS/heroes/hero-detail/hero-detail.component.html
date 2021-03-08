@@ -1,3 +1,18 @@
-<div class="hero-detail">
+<div *ngIf="hero$ | async as hero">
   <h2>Hero Detail</h2>
+  <h3>"{{ hero.name }}"</h3>
+  <div>
+    <label>Id: </label>{{ hero.id }}</div>
+  <div>
+    <label>Name: </label>
+    <input [(ngModel)]="hero.name" placeholder="name"/>
+  </div>
+  <p>
+   <button (click)="back(hero.id)" class="btn btn-secondary">Back to Heroes</button>
+
+    <!-- <button routerLink="/heroes" class="btn btn-secondary">Back to Heroes</button> -->
+
+    <!-- <button [routerLink]="['/heroes', { id: hero.id }]" class="btn btn-secondary">Back to Heroes</button> -->
+    <!-- 因为后面传参，routerLink要绑定，加[]. [routerLink] -->
+  </p>
 </div>
