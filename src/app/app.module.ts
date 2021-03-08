@@ -10,12 +10,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CrisisCenterModule } from './routerS/crisis-center/crisis-center.module';
 import { HeroesModule } from './routerS/heroes/heroes.module';
 import { NotFoundComponent } from './routerS/not-found/not-found.component';
+import { ComposeMessageComponent } from './routerS/compose-message/compose-message.component';
 @NgModule({
   declarations: [
     AppComponent,
     HerosComponent,
     LayoutComponent,
     NotFoundComponent,
+    ComposeMessageComponent,
   ],
   imports: [
     BrowserModule,

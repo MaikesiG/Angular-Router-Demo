@@ -37,6 +37,14 @@ export class HeroListComponent implements OnInit {
   ngOnInit(): void {
     this.selectedId = +this.route.snapshot.paramMap.get('id');
     this.heroes$ = this.heroServe.getHeroes();
+    this.getQueryName();
+  }
+  private getQueryName() {
+    this.route.queryParamMap.subscribe(res=>{
+      res.get('name');
+    });
+    //or
+    this.route.snapshot.queryParamMap.get('name')
   }
   onSelected(id:number) {
     this.selectedId = id;

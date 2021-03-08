@@ -6,9 +6,17 @@
     <!-- <a routerLink="/crisis-center" routerLinkActive="active-link">crisis center</a> |
     <a routerLink="/heroes" routerLinkActive="active-link">heroes</a> -->
     <!-- 做其他事情用方法导航 -->
-    <a (click)="toCrisisCenter()" routerLinkActive="active-link">crisis center</a> |
-    <a (click)="toHeroes()" routerLinkActive="active-link">heroes</a>
+    <!-- <a (click)="toCrisisCenter()" routerLinkActive="active-link">crisis center</a> |
+    <a (click)="toHeroes()" routerLinkActive="active-link">heroes</a> -->
+    <!-- <a (click)="toHeroes()" routerLinkActive="active-link">Contract</a> -->
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button routerLink="/crisis-center" routerLinkActive="btn-info" type="button" class="btn btn-secondary">crisis center</button>
+      <button routerLink="/heroes" routerLinkActive="btn-info" type="button" class="btn btn-secondary">heroes</button>
+      <button [routerLink]="[{outlets:{popup:['compose']}}]" routerLinkActive="btn-info" type="button" class="btn btn-secondary">Contract</button>
+    </div>
   </nav>
   <router-outlet></router-outlet>
+  <router-outlet name="popup"></router-outlet>
+
 </div>
 
