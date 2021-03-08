@@ -1,3 +1,14 @@
 <div class="app">
-  <app-layout></app-layout>
+  <!-- <app-layout></app-layout> -->
+  <h2>RouterStudy</h2>
+  <nav>
+    <!-- 只是导航用routerlink -->
+    <!-- <a routerLink="/crisis-center" routerLinkActive="active-link">crisis center</a> |
+    <a routerLink="/heroes" routerLinkActive="active-link">heroes</a> -->
+    <!-- 做其他事情用方法导航 -->
+    <a (click)="toCrisisCenter()" routerLinkActive="active-link">crisis center</a> |
+    <a (click)="toHeroes()" routerLinkActive="active-link">heroes</a>
+  </nav>
+  <router-outlet></router-outlet>
 </div>
+

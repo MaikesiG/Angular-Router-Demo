@@ -7,17 +7,23 @@ import { LayoutComponent } from './pages/layout/layout.component';
 import { HerosComponent } from './pages/heros/heros.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CrisisCenterModule } from './routerS/crisis-center/crisis-center.module';
+import { HeroesModule } from './routerS/heroes/heroes.module';
+import { NotFoundComponent } from './routerS/not-found/not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
+    HerosComponent,
     LayoutComponent,
-    HerosComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HeroesModule,
+    CrisisCenterModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
