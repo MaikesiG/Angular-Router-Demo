@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
     CrisisCenterComponent,
     CrisisCenterHomeComponent,
     CrisisDetailComponent,
+
   ],
   imports: [
     CommonModule,

@@ -1,5 +1,5 @@
-<div *ngIf="crisis$ | async as crisis">
-  <h5>Crisis detail</h5>
+<div *ngIf="crisis">
+  <h5>英雄详情</h5>
   <h2>{{crisis.name | uppercase}} Details</h2>
   <div><span>id: </span>{{crisis.id}}</div>
   <div>
@@ -8,8 +8,7 @@
     </label>
   </div>
   <div class="btns">
-    <!-- <button class="btn btn-secondary" (click)="cancel()">取消</button>
-    <button class="btn btn-secondary" (click)="save()">保存</button> -->
+    <button class="btn btn-secondary" (click)="cancel()">取消</button>
+    <button class="btn btn-secondary" (click)="save()">保存</button>
   </div>
-  <button class="btn btn-secondary" routerLink="../../home">back</button>
 </div>

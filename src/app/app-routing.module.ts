@@ -7,8 +7,14 @@ import { NotFoundComponent } from './routerS/not-found/not-found.component';
 
 
 const routes: Routes = [
-  {path:'',redirectTo:'/heroes',pathMatch:'full'},
-  {path:"**",component:NotFoundComponent},
+  {
+    path:'',
+    redirectTo:'/heroes',
+    pathMatch:'full'},
+  {
+    path:"**",
+    component:NotFoundComponent
+  },
 ];
 const nameRoutes = [
   {path:'compose',component:ComposeMessageComponent,outlet:'popup',}
@@ -16,7 +22,7 @@ const nameRoutes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes.concat(nameRoutes),
     {
-     enableTracing:true,
+    //  enableTracing:true,
      onSameUrlNavigation:'reload',
     }
   )],
