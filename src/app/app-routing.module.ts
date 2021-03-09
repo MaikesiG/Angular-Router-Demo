@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './routerS/auth/auth.guard';
 import { ComposeMessageComponent } from './routerS/compose-message/compose-message.component';
 import { CrisisListComponent } from './routerS/crisis-center/crisis-list/crisis-list.component';
 import { HeroListComponent } from './routerS/heroes/hero-list/hero-list.component';
@@ -10,6 +11,7 @@ const routes: Routes = [
   {
     path:'admin',
     loadChildren: ()=> import('./routerS/admin/admin.module').then(m=>m.AdminModule),
+    canLoad:[AuthGuard],
   },
   {
     path:'',
